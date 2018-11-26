@@ -37,3 +37,4 @@ Forecast for the next 3 days:
 "
 
 NOTE: Date format is not important. print it as the api provides it.
+
