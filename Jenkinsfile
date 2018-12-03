@@ -2,19 +2,11 @@ pipeline{
     agent {label 'aws_dyn_slave'}
 
     stages{
-      stage('---clean---'){
+      stage('---checkout---'){
         steps{
-            sh "mvn clean"
-        }
-      }
-      stage('---test---'){
-        steps{
-            sh "mvn test"
-        }
-      }
-      stage('---package---'){
-        steps{
-            sh "mvn package"
+            sh '''#!/bin/bash
+            ls -l
+            pwd
         }
       }
     }
