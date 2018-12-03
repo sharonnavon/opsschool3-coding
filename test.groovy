@@ -14,15 +14,8 @@ node ('aws_dyn_slave'){
       }
       stage('---package---'){
         steps{
-            dir('dir3') {
-               git url: 'https://github.com/sharonnavon/opsschool3-coding.git'
+            sh "mvn package"
            }
         }
-      }
-      sh '''
-            #!/bin/bash
-            ls -l
-            pwd
-         '''
     }
 }
