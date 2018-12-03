@@ -1,5 +1,6 @@
-node ('aws_dyn_slave'){
-  echo 'Strating weather script:'
+pipeline{
+    node ('aws_dyn_slave')
+    echo 'Strating weather script:'
 
     stages{
       stage('---clean---'){
@@ -15,7 +16,7 @@ node ('aws_dyn_slave'){
       stage('---package---'){
         steps{
             sh "mvn package"
-           }
         }
+      }
     }
 }
