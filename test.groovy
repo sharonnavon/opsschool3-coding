@@ -1,5 +1,5 @@
 pipeline{
-    agent 'aws_dyn_slave'
+    agent {aws_dyn_slave}
 
     stages{
       stage('---clean---'){
