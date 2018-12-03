@@ -1,6 +1,5 @@
 pipeline{
-    node ('aws_dyn_slave')
-    echo 'Strating weather script:'
+    agent 'aws_dyn_slave'
 
     stages{
       stage('---clean---'){
